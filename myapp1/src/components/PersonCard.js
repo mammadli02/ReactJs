@@ -3,7 +3,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import { Button } from '@mui/material';
 export class PersonCard extends Component {
   handleDelete = (dataId) => {
     console.log('Data silindi:', dataId);
@@ -27,8 +28,8 @@ export class PersonCard extends Component {
         <Typography variant="body3" color="text.secondary">
         {this.props.age}
         </Typography>
-        <button onClick={() => this.handleDelete(this.props.id)}>Sil</button>
       </CardContent>
+        <Button onClick={() => this.handleDelete(this.props.id)} variant="contained">Delete</Button>
      
     </Card>
 
@@ -38,10 +39,13 @@ export class PersonCard extends Component {
   }
 }
 
-// PersonCard.PropTypes={
-//   name: PropTypes.string.isRequired,
-//   surname: PropTypes.string,
-//   age:PropTypes.number,
-//   image:PropTypes.string.isRequired
-// }
 export default PersonCard
+PersonCard.propTypes={
+  name: PropTypes.string.isRequired,
+  surname: PropTypes.string,
+  age:PropTypes.number,
+  image:PropTypes.string.isRequired
+}
+// Person.propTypes={
+//   persons: PropTypes.string.isRequired
+// }

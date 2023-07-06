@@ -3,11 +3,10 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 export class PersonCard extends Component {
   handleDelete = (dataId) => {
-    // Veriyi silme işlemini burada gerçekleştirin veya bir işlevi çağırın
-    console.log('Veri silindi:', dataId);
+    console.log('Data silindi:', dataId);
   };
   render() {
     return (
@@ -39,10 +38,10 @@ export class PersonCard extends Component {
   }
 }
 
+// PersonCard.PropTypes={
+//   name: PropTypes.string.isRequired,
+//   surname: PropTypes.string,
+//   age:PropTypes.number,
+//   image:PropTypes.string.isRequired
+// }
 export default PersonCard
-PersonCard.PropTypes={
-  name: PropTypes.string,
-  surname: PropTypes.string,
-  age:PropTypes.number,
-  image:PropTypes.string
-}

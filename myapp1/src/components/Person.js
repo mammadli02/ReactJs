@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import PersonCard from './PersonCard';
-import PropTypes from 'prop-types';
+import PersonCard from '../components/PersonCard';
+// import PropTypes from 'prop-types';
 export class Person extends Component {
   static defaultProps={
     persons:[]
@@ -10,12 +10,7 @@ export class Person extends Component {
   render() {
     return (
 <>
-
-
 <Container maxWidth="lg" style={{marginTop:"50px"}}>
-
-
-
 <Grid container spacing={2}>
 {this.props.persons?.map((person,index)=>(
          
@@ -32,13 +27,11 @@ key={index}
 
 </Container>
 
-
-
-
 </>   
  )
   }
 }
-Person.PropTypes={
-  persons: PropTypes.string
-}
+
+// Person.PropTypes={
+//   persons: PropTypes.string.isRequired
+// }
